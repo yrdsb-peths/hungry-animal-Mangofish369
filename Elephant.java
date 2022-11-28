@@ -5,7 +5,7 @@ public class Elephant extends Actor
     public void act() 
     {
         // Add your action code here.
-        move(2);
+        move(4);
         
         if(isAtEdge()){
             turn(180);
