@@ -7,7 +7,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         
         // Make our Elephant
         Elephant elephant = new Elephant();
@@ -31,5 +31,11 @@ public class MyWorld extends World
             int x = Greenfoot.getRandomNumber(getWidth());
             int y = 10;
             addObject(pear,x, y);
+    }
+    
+    //End Game
+    public void gameOver(){
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300,200);
     }
 }
