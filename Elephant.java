@@ -12,6 +12,7 @@ public class Elephant extends Actor
             move(10);
        }
        
+       
        consume();
        
        /* 
@@ -28,6 +29,7 @@ public class Elephant extends Actor
             removeTouching(Pear.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnPear();
+            world.increaseScore();
         }
     }
 }

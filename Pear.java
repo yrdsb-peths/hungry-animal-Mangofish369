@@ -8,5 +8,7 @@ public class Pear extends Actor
     {
         setLocation(getX(), getY()+2);
         
+        
+        
     }    
 }
