@@ -1,5 +1,6 @@
 #Greenfoot project file
 class.Elephant.image=elephant_idle.png
+class.MyWorld.image=background.jpg
 class.Pear.image=pear.png
 dependency1.from=MyWorld
 dependency1.to=Label
@@ -39,7 +40,7 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
-simulation.speed=52
+simulation.speed=47
 target1.height=50
 target1.name=Pear
 target1.showInterface=false
