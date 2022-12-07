@@ -30,6 +30,10 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.spawnPear();
             world.increaseScore();
+            elephantSound.play();
         }
     }
+    
+    //Sound object
+    GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
 }
