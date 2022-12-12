@@ -4,6 +4,8 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
+    int level = 1;
+    int numOfPears = 0;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -28,9 +30,14 @@ public class MyWorld extends World
     // Spawn pear at random x location
         public void spawnPear(){
             Pear pear = new Pear();
+            pear.setSpeed(level);
             int x = Greenfoot.getRandomNumber(getWidth());
             int y = 10;
             addObject(pear,x, y);
+            numOfPears++;
+            if(numOfPears % 5 == 0){
+                level+= 1;
+            }
     }
     
     //End Game
