@@ -4,6 +4,7 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
+    Label levelLabel;
     int level = 1;
     int numOfPears = 0;
     public MyWorld()
@@ -16,15 +17,22 @@ public class MyWorld extends World
         addObject(elephant, 0,300);
         
         // Label
-        scoreLabel = new Label(0,60);
-        addObject(scoreLabel, 40, 40);
+        scoreLabel = new Label("Score: "+score,60);
+        addObject(scoreLabel, 100, 40);
+        
+        levelLabel = new Label("Speed: "+level,60);
+        addObject(levelLabel, 100, 90);
         // Make Pear
         spawnPear();
     } 
     //Increase score
     public void increaseScore(){
         score++;
-        scoreLabel.setValue(score);
+        scoreLabel.setValue("Score: "+score);
+    }
+    
+    public void increaseLeve(){
+        
     }
     
     // Spawn pear at random x location
@@ -37,6 +45,7 @@ public class MyWorld extends World
             numOfPears++;
             if(numOfPears % 5 == 0){
                 level+= 1;
+                levelLabel.setValue("Speed: "+level);
             }
     }
     
