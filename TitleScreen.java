@@ -20,6 +20,7 @@ public class TitleScreen extends World
         addObject(title, 300, 150);
     }
     
+    //Switch to game world if space bar is pressed
     public void act(){
         if(Greenfoot.isKeyDown("space")){
             MyWorld gameWorld = new MyWorld();
